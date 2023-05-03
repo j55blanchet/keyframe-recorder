@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>Keyframe Recorder</h1>
+    <input type="file" id="videoFile" accept="video/*" aria-label="Video File">
+    <div id="cachedKeyframesList"></div>
+    <video id="videoPlayer" controls></video>
+    <div class="controls">
+        <label for="playbackRate">Playback Rate:</label>
+        <select id="playbackRate">
+            <option value="0.25">0.25x</option>
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1" selected>1x</option>
+        </select>
+        <span class="currentTime">00:00.00</span>
+        <button type="button" id="seekBackward">Seek Backward</button>
+        <button type="button" id="seekForward">Seek Forward</button>
+    </div>
+    <div class="controls">
+        <input type="text" id="keyframeName" placeholder="Keyframe Name">
+        <input type="number" id="keyframeLevel" min="1" max="7" value="1" placeholder="Level (1-7)">
+        <span class="currentTime">00:00:00</span>
+        <button type="button" id="captureKeyframe">Capture Keyframe</button>
+    </div>
+    <div class="controls">
+        <label for="keyframeSetName">Keyframe Set Name:</label>
+        <input type="text" id="keyframeSetName" />
+        <button type="button" id="saveKeyframes">Cache Keyframes</button>
+    </div>
+    <div id="keyframesContainer">
+        <h2>Keyframes</h2>
+        <ul id="keyframesList"></ul>
+    </div>
+    <button type="button" id="downloadKeyframes">Download Keyframes</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

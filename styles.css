@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+#videoPlayer {
+    width: 100%;
+    max-height: 60vh;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+#keyframesContainer {
+    margin-bottom: 16px;
+}
+
+#keyframesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 0;
+    flex-direction: row;
+}
+
+.keyframeItem {
+    list-style-type: none;
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+
+.keyframeItem img {
+    width: 100%;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+    margin-top: 4px;
+}
+
+.keyframeItem[data-level="1"] {
+    background-color: #2962ff;
+}
+.keyframeItem[data-level="2"] {
+    background-color: #81a2fe;
+}
+.keyframeItem[data-level="3"] {
+    background-color: #c5d6ff;
+}
+.keyframeItem[data-level="4"] {
+    background-color: #ffffff;
+}
+.keyframeItem[data-level="5"] {
+    background-color: #ecffdd;
+}
+.keyframeItem[data-level="6"] {
+    background-color: #cfffab;
+}
+.keyframeItem[data-level="7"] {
+    background-color: #befd8e;
+}
